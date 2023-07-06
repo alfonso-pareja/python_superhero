@@ -18,7 +18,7 @@ python main.py
 ```
 
 ## Descripción del Proyecto
-Al iniciar el proyecto, se crean dos equipos, cada uno compuesto por cinco Superhéroes obtenidos de manera aleatoria desde la API 'https://api.'. Para cada Superhéroe creado, se calculan sus respectivas estadísticas de acuerdo con las especificaciones proporcionadas. El alineamiento de cada equipo se define según la mayoría de personajes con alineamiento 'good' o 'bad'.
+Al iniciar el proyecto, se crean dos equipos, cada uno compuesto por cinco Superhéroes obtenidos de manera aleatoria desde la API 'https://superheroapi.com/api/'. Para cada Superhéroe creado, se calculan sus respectivas estadísticas de acuerdo con las especificaciones proporcionadas. El alineamiento de cada equipo se define según la mayoría de personajes con alineamiento 'good' o 'bad'.
 
 Una vez creados los equipos, da inicio la batalla. Para el equipo 'Good', se debe seleccionar el personaje y el ataque, mientras que para el equipo 'Bad', tanto el personaje como el ataque se definen aleatoriamente.
 
