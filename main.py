@@ -10,7 +10,7 @@ from common.constants import (
 
 
 def get_random_heroes(num_heroes):
-    # Se obtienen aleatoriamente de la cantidad total de Super Heroes, una Lista de numeros de la longitud de num_heroes
+    # Se obtienen aleatoriamente de la cantidad total de Super Heroes, una Lista de numeros de la longitud de num_heroes.
     # Los id de superheroes coinciden con su posicion en la lista
     hero_ids = random.sample(range(1, _TOTAL_HEROES + 1), num_heroes)
     heroes = []
@@ -63,7 +63,7 @@ def set_team_alignment(team1, team2):
 
 
 def choice_hero(heroes):
-    print("Selecciona tu Heroe:")
+    print("Selecciona tu Héroe:")
     # Se lista la posicion y nombre de cada heroe
     for i, hero in enumerate(heroes, start=1):
         print(f"{i}. {hero.name}")
@@ -74,7 +74,7 @@ def choice_hero(heroes):
         selected_hero = heroes[int(hero_choice) - 1]
     except (ValueError, IndexError):
         selected_hero = heroes[0]
-        print(f'{_RED}No seleccionaste ningun heroe, se selecciono a {selected_hero.name}{_NO_COLOR}')
+        print(f'{_RED}No seleccionaste ningún héroe, se seleccionó a {selected_hero.name}{_NO_COLOR}')
     return selected_hero
 
 
@@ -97,7 +97,7 @@ def choice_attack(hero):
     except ValueError:
         # se selecciona por defecto el ataque 1
         attack_choice = 1
-        print(f'{_RED}No seleccionaste ningun ataque, se selecciono un ataque por defecto{_NO_COLOR}')
+        print(f'{_RED}No seleccionaste ningún ataque, se seleccionó un ataque por defecto{_NO_COLOR}')
         time.sleep(1)
 
     return attack_choice
@@ -149,7 +149,7 @@ def simulate_battle(teamHeroes, teamEnemies):
             pause()
             clear()
             hero_combat(hero, len(teamHeroes.heroes), teamHeroes.name, enemy, len(teamEnemies.heroes), teamEnemies.name)
-            center_message(f"{_BLUE}{hero.name} ha derroto a {enemy.name}!{_NO_COLOR}")
+            center_message(f"{_BLUE}{hero.name} ha derrotado a {enemy.name}!{_NO_COLOR}")
 
             # Se elimina el enemigo de la lista de personajes para su team
             enemies.remove(enemy)
@@ -157,7 +157,7 @@ def simulate_battle(teamHeroes, teamEnemies):
                 # Console Messages
                 clear()
                 print("\n")
-                center_message(f"Los Hereos triunfan, {teamHeroes.name} vencio! {_WIN}")
+                center_message(f"Los héroes triunfan, el {teamHeroes.name} venció! {_WIN}")
                 break
 
         # Console Messages
@@ -181,7 +181,7 @@ def simulate_battle(teamHeroes, teamEnemies):
             # Console Messages
             clear()
             hero_combat(hero, len(teamHeroes.heroes), teamHeroes.name, enemy, len(teamEnemies.heroes), teamEnemies.name)
-            center_message(f"{_BLUE}{enemy.name} ha derroto a {hero.name}!{_NO_COLOR}")
+            center_message(f"{_BLUE}{enemy.name} ha derrotado a {hero.name}!{_NO_COLOR}")
             pause()
 
             # Se elimina al Heroe de la lista de personajes para su team
@@ -190,7 +190,7 @@ def simulate_battle(teamHeroes, teamEnemies):
                 # Console Messages
                 clear()
                 print("\n")
-                center_message(f"Los enemigos triunfan en esta batalla. {teamEnemies.name} Gana! {_WIN}")
+                center_message(f"Los enemigos triunfan en esta batalla. El {teamEnemies.name} gana! {_WIN}")
                 break
 
         time.sleep(1)
@@ -200,17 +200,17 @@ def simulate_battle(teamHeroes, teamEnemies):
 
 def main():
     clear()
-    print(f'{_BLUE}Creando Personajes para el Team 1!{_NO_COLOR}\n')
+    print(f'{_BLUE}Creando personajes para el Equipo 1!{_NO_COLOR}\n')
 
     # Creando primer grupo de personajes
-    team1 = create_team('Team 1')
+    team1 = create_team('Equipo 1')
     time.sleep(1)
     clear()
 
-    print(f'{_BLUE}Creando Personajes para el Team 2!{_NO_COLOR}\n')
+    print(f'{_BLUE}Creando personajes para el Equipo 2!{_NO_COLOR}\n')
 
     # Creando segundo grupo de personajes
-    team2 = create_team('Team 2')
+    team2 = create_team('Equipo 2')
     time.sleep(1)
     clear()
 
@@ -218,12 +218,12 @@ def main():
     team1, team2 = set_team_alignment(team1, team2)
     
     messageTeam1 = f"""
-        {_GREEN}Team 1 Creado!{_NO_COLOR}
+        {_GREEN}Equipo 1 creado!{_NO_COLOR}
         Aligment: {team1.alignment.capitalize()}
         Personajes: {", ".join(personaje.name for personaje in team1.heroes)}
     """
     messageTeam2 = f"""
-        {_GREEN}Team 2 Creado!{_NO_COLOR}
+        {_GREEN}Equipo 2 creado!{_NO_COLOR}
         Aligment: {team2.alignment.capitalize()}
         Personajes: {", ".join(personaje.name for personaje in team2.heroes)}
     """
