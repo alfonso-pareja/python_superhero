@@ -1,7 +1,3 @@
-# SuperHero Battle Simulator
-
-Este proyecto fue desarrollado como respuesta a la prueba técnica para el proceso de selección en Toku.
-
 
 ## Instalación
 
