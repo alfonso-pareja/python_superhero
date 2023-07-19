@@ -4,6 +4,7 @@ env/
 ENV/
 virtualenv/
 
+
 # Archivos generados
 __pycache__/
 .cache/
