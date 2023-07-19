@@ -1,5 +1,6 @@
 import random
 
+
 class SuperHero:
     def __init__(self, id, name, stats, alignment):
         self.id = id

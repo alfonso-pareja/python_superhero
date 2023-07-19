@@ -3,6 +3,7 @@
 Mensajes de la consola
 """
 
+
 import os
 from common.constants import (
     _GREEN, _RED, _BLUE, _NO_COLOR

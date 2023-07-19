@@ -9,6 +9,7 @@ from common.constants import (
 )
 
 
+
 def get_random_heroes(num_heroes):
     # Se obtienen aleatoriamente de la cantidad total de Super Heroes, una Lista de numeros de la longitud de num_heroes.
     # Los id de superheroes coinciden con su posicion en la lista
